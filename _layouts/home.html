@@ -9,7 +9,7 @@ layout: base
 
   {{ content }}
 
-
+  <div class="wrapper post-wrapper">
   {% if site.paginate %}
     {% assign posts = paginator.posts %}
   {% else %}
@@ -57,5 +57,5 @@ layout: base
     {%- endif %}
 
   {%- endif -%}
-
+</div>
 </div>
