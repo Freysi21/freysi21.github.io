@@ -5,7 +5,7 @@
 layout: home
 ---
 <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/styles.css">
-<div class="landing">
+<div class="landing parallax">
         <h1 class="text">
             <div class="line scroll-animate">
                 <p>ARNI</p>
@@ -26,3 +26,13 @@ layout: home
 <!--shot out to this guy https://codepen.io/kotAndy/pen/ZrdGZr-->
 </div>
 
+<script>
+    window.addEventListener('scroll', function() {
+        const parallaxElements = document.querySelectorAll('.parallax');
+        let scrollPosition = window.pageYOffset;
+
+        parallaxElements.forEach(function(element) {
+            element.style.transform = 'translateY(' + scrollPosition * 0.5 + 'px)';
+        });
+    });
+</script>
