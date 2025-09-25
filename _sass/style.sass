@@ -1,0 +1,246 @@
+@import "0-base/0-base_dir.sass"
+@import "1-modules/1-modules_dir.sass"
+@import "2-layouts/2-layouts_dir.sass"
+@import "colors"
+
+.page
+    height: 400vh
+.site-title, .site-title:visited
+    color: white
+
+a
+    color: white
+    &:visited
+        color: $magento
+        text-decoration: none
+    &:hover
+        color: $magento
+        text-decoration: none
+   
+h2
+    padding: 0 15px
+
+ul 
+    padding: 0 15px
+
+.site-title
+    &:hover
+        color: $magento
+        text-decoration: none
+
+.site-header 
+    padding-left: 18px 
+    border: none
+    min-height: 55.95px
+    position: relative
+
+.site-nav
+    border: none
+    background: $black
+    color: white
+    .menu-icon svg
+        fill: white
+        &:hover
+            fill: $magento
+
+    a.page-link
+        color: white
+        &:hover
+            color: $magento
+
+.landing
+    height: 20vh
+    padding: 20vh 0
+    overflow: hidden
+    max-width: 100vw
+    
+
+.matrix-landing
+    overflow: visible
+    position: relative
+
+.wrapper
+    overflow: visible
+    max-width: 800px
+    padding: 0
+
+body
+    background: $black
+    color: white 
+
+p
+    margin: 0
+
+.background
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+.text
+    min-width: 700px
+    margin: 0
+    font-size: 70px
+    text-align: left
+    text-transform: uppercase
+    font-weight: bold
+    text-align: center
+
+    .line
+        overflow: hidden
+        white-space: nowrap
+        height: 64px
+        line-height: .9
+
+            
+        &:first-child
+            & + .line
+                margin-left: 75px
+                & + .line
+                    margin-left: 146px
+
+
+        > p
+            margin: 0
+            height: 70px
+            font-size: 1em
+            line-height: .9
+            white-space: nowrap
+            animation: moveWords 6s infinite  cubic-bezier(0, 0, 1, 1)
+            &:hover
+                color: $magento
+    .line:nth-child(odd)
+        transform: skew(60deg, -30deg) scaleY(.66667)
+
+    .line:nth-child(even)
+        transform: skew(0deg, -30deg) scaleY(1.33333)
+
+
+
+@media screen and (max-width: 888px)
+    .text
+        padding-right: 20px
+        font-size: 64px
+        .line
+            white-space: nowrap
+            height: 60px
+            line-height: .9
+            &:first-child
+                & + .line
+                    margin-left: 70px
+                    & + .line
+                        margin-left: 140px
+
+@media screen and (max-width: 768px)
+    .text
+        transform: translateX(-180px)
+
+
+@keyframes moveWords
+    0%
+        transform: translateY(0%)
+    50%
+        transform: translateY(-100%)
+    100%
+        transform: translateY(0%)
+
+
+.person-card
+    display: flex
+    align-items: center
+    background-color: rgba(255, 255, 255, 0.1)
+    border-radius: 8px
+    padding: 20px
+    max-width: 100%
+    margin: 20px 0
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+    h2
+        padding: 0
+
+.top-content
+    display: flex
+
+.bio-titles
+    display: flex
+    flex-direction: column
+    justify-content: center
+    text-align: left
+
+.bio-image
+    width: 150px
+    height: 150px
+    border-radius: 50%
+    margin: 20px
+    transform: scaleX(-1)
+    
+.bio-content
+    display: flex
+    flex-direction: column
+
+.bio-name
+    font-size: 1.5em
+    margin: 0
+
+.bio-employment
+    font-size: 1.2em
+    margin: 5px 0
+
+.bio-description
+    font-size: 1em
+
+.parallax 
+    position: relative
+
+.about-img 
+    border-radius: 50%
+    width: 40vw
+    height: 40vw
+    max-width: 400px
+    max-height: 400px
+
+    margin: 0 auto
+    display: block
+    bottom: 40px 20px
+
+.about-p 
+    text-align: justify
+    padding: 20px 20px
+
+.post-header
+    padding: 0px 20px
+
+
+.post-wrapper
+    padding-top: 100px
+    position: relative
+    background-color: rgba(28, 28, 28, 0.8) // Adjust the colors and opacity values as needed
+    padding: 20px // Adjust the padding as needed
+
+    &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        height: 100px
+        right: 0
+        backdrop-filter: blur(2px) // Apply blur effect
+        -webkit-backdrop-filter: blur(2px) // For Safari support
+        background: linear-gradient(to bottom, rgba(28, 28, 28, 0), rgba(28, 28, 28, 0.8)) // Green gradient with opacity
+        pointer-events: none
+        margin-top: -100px // Negative margin to cover the padding area
+        border-radius: inherit // Maintain border-radius if any
+
+.wrapper
+    backdrop-filter: blur(2px) // Apply blur effect
+    -webkit-backdrop-filter: blur(2px) // For Safari support
+
+        
+.post-wrapper
+    padding-top: 40px
+.reverse-parallax
+    top: 100vh
+    position: absolute
+.reverse-parallax-container
+    position: relative
+    max-height: 0px
+    overflow:  visible
